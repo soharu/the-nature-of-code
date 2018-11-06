@@ -1,0 +1,25 @@
+.center {
+    margin: 0 auto;
+    /* border: 3px solid green;
+    padding: 10px; */
+}
+
+#sketch-holder-centered {
+  /* background-position: center; */
+  width: 500px;
+  margin: 0 auto;
+}
+
+.main {
+  background: #ff0;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.center {
+  margin: 0 auto;
+  width: 200px;
+  background: black;
+  padding: 20px;
+  color: white;
+}
