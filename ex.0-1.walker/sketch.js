@@ -10,18 +10,23 @@ class Walker {
     }
 
     step() {
+        var directions = [
+            "right", "right",
+            "left",
+            "down", "down",
+            "up"
+        ];
         var x = this.x;
         var y = this.y;
-
         while (x == this.x && y == this.y) {
-            var choice = floor(random(0, 6));
-            if (choice == 0 || choice == 1) {
+            var dir = random(directions);
+            if (dir == "right") {
                 x = min(this.x + 1, 640); // right
-            } else if (choice == 2) {
+            } else if (dir == "left") {
                 x = max(this.x - 1, 0);   // left
-            } else if (choice == 3 || choice == 4) {
+            } else if (dir == "down") {
                 y = min(this.y + 1, 360); // down
-            } else if (choice == 5) {
+            } else if (dir == "up") {
                 y = max(this.y - 1, 0);   // up
             }
         }
@@ -43,4 +48,5 @@ function draw() {
     walker.step();
 }
 
+// https://p5js.org/examples/instance-mode-instance-container.html
 new p5(sketch, 'container');
