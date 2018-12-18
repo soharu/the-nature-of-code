@@ -39,7 +39,8 @@ class Walker {
 var walker = new Walker(320, 180);
 
 function setup() {
-    createCanvas(640, 360);
+    var canvas = createCanvas(640, 360);
+    canvas.parent('container');
     background('#ccc');
 }
 
@@ -47,6 +48,3 @@ function draw() {
     walker.display();
     walker.step();
 }
-
-// https://p5js.org/examples/instance-mode-instance-container.html
-new p5(sketch, 'container');
